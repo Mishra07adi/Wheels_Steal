@@ -53,7 +53,11 @@ function DefaultLayout(props) {
 
         <p>Desinged and Developed By</p>
 
-        <p>Aditya Mishra</p>
+        <p>
+          <a href="https://adityamishra-97429.web.app/" target="_blank">
+            <b>Aditya Mishra</b>
+          </a>
+        </p>
       </div>
     </div>
   );
