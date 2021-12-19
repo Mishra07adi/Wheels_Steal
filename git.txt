@@ -1,0 +1,6 @@
+git init
+git add .
+git status
+git commit -m "message"
+git branch -M main
+git push https://github.com/Mishra07adi/Wheels_Steal.git --force
