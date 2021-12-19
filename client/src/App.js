@@ -14,9 +14,6 @@ import EditCar from './pages/EditCar';
 function App() {
   return (
     <div className="App">
-
-         
-         
          <BrowserRouter>
              
              <ProtectedRoute path='/' exact component={Home} />

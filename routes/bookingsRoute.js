@@ -4,7 +4,7 @@ const Booking = require("../models/bookingModel");
 const Car = require("../models/carModel");
 const { v4: uuidv4 } = require("uuid");
 const stripe = require("stripe")(
-  "sk_test_51IYnC0SIR2AbPxU0EiMx1fTwzbZXLbkaOcbc2cXx49528d9TGkQVjUINJfUDAnQMVaBFfBDP5xtcHCkZG1n1V3E800U7qXFmGf"
+  "sk_test_51K5moJSJxUX18374ROHyzMzIHJOTi5VloKsFVxrdmW7Vp5BkR22e03kjpjWRNEyxKN8OBjVHVlTLLtVr77CkUeJP00nzCe4EGx"
 );
 router.post("/bookcar", async (req, res) => {
   const { token } = req.body;
@@ -23,7 +23,6 @@ router.post("/bookcar", async (req, res) => {
       },
       {
         idempotencyKey: uuidv4(),
-        
       }
     );
 
@@ -36,8 +35,10 @@ router.post("/bookcar", async (req, res) => {
       car.bookedTimeSlots.push(req.body.bookedTimeSlots);
 
       await car.save();
-      res.send("Your booking is successfull");
-    } else {
+      res.send("Your Booking is Successfull");
+    } 
+    else 
+    {
       return res.status(400).json(error);
     }
   } catch (error) {

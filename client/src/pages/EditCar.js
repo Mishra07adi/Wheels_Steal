@@ -31,7 +31,7 @@ function EditCar({ match }) {
     <DefaultLayout>
       {loading && <Spinner />}
       <Row justify="center mt-5">
-        <Col lg={12} sm={24} xs={24} className='p-2'>
+        <Col lg={12} sm={24} xs={24} className="p-2">
           {totalcars.length > 0 && (
             <Form
               initialValues={car}

@@ -3,7 +3,7 @@ import {message} from 'antd'
 
 export const userLogin=(reqObj)=>async dispatch=>{
     
-    dispatch({type: 'LOADING' , payload:true})
+    dispatch({type: 'LOADING' ,payload:true})
 
     try {
         const response = await axios.post('/api/users/login' , reqObj)
